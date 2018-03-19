@@ -1,0 +1,11 @@
+service: t311-alexa-template
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: us-west-2
+  memorySize: 128
+functions:
+  handler:
+    handler: index.handler
+    events:
+      - alexaSkill

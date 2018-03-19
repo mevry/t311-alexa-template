@@ -1,0 +1,10 @@
+{
+  "name": "alexa-github-template",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "alexa-sdk": "~1.0.25",
+    "i18next": "~10.5.1",
+    "i18next-sprintf-postprocessor": "~0.2.2"
+  }
+}
