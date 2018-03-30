@@ -1,3 +1,4 @@
+//ADA Service Animal Category
 
 exports.adaServiceAnimalHousingIntents = {
     "AdaServiceAnimalHousing": function(){

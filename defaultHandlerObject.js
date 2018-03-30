@@ -1,7 +1,4 @@
-const https = require('https');
-
-
-
+//Default Handler
 exports.defaultHandlerObject = {
     'LaunchRequest': function() {
         this.emit(':tell', 'Welcome to the GitHub Skill.');
