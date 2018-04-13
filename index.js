@@ -6,6 +6,7 @@ const Alexa = require('alexa-sdk');
 const defaultHandler = require('./defaultHandlerObject');
 const adaServiceAnimalHousing = require('./intents/adaServiceAnimalHousing');
 const additionsRemodels = require('./intents/additionsRemodels');
+const animalNuisance = require('./intents/AnimalControl/animalNuisance');
 
 const APP_ID = 'amzn1.ask.skill.d65c018f-7aee-489f-b7f9-e7b599654a39';
 
@@ -15,7 +16,8 @@ exports.handler = (event, context, callback) => {
     alexa.registerHandlers(
                         defaultHandler.defaultHandlerObject, 
                         adaServiceAnimalHousing.adaServiceAnimalHousingIntents,
-                        additionsRemodels.additionsRemodelsIntents
+                        additionsRemodels.additionsRemodelsIntents,
+                        animalNuisance.animalNuisanceObject
     );
     
     alexa.execute();

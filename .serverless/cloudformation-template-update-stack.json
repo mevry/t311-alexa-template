@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/t311-alexa-template/dev/1521500638774-2018-03-19T23:03:58.774Z/t311-alexa-template.zip"
+          "S3Key": "serverless/t311-alexa-template/dev/1523578202824-2018-04-13T00:10:02.824Z/t311-alexa-template.zip"
         },
         "FunctionName": "t311-alexa-template-dev-handler",
         "Handler": "index.handler",
@@ -111,14 +111,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HandlerLambdaVersion6dnpRp0ycUsdDw2gq00epOVO0O2TGFkaRUfFs9MvzMw": {
+    "HandlerLambdaVersion2RqnnOupgFNtTpaA1Pf6J2KWCLYNm4FWezT1aNrfFE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HandlerLambdaFunction"
         },
-        "CodeSha256": "EjfJCoK2D0ZSJtpNhBjRJAO3CsMtiPAGhGe62ERp0AE="
+        "CodeSha256": "UFWtWhMTmXmufz5cAxqFDPX9F6/OAIYzHsvrWCbSNqM="
       }
     },
     "HandlerLambdaPermissionAlexaSkill": {
@@ -144,7 +144,7 @@
     "HandlerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HandlerLambdaVersion6dnpRp0ycUsdDw2gq00epOVO0O2TGFkaRUfFs9MvzMw"
+        "Ref": "HandlerLambdaVersion2RqnnOupgFNtTpaA1Pf6J2KWCLYNm4FWezT1aNrfFE"
       }
     }
   }
