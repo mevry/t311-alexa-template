@@ -107,7 +107,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/t311-alexa-template/dev/1523592692269-2018-04-13T04:11:32.269Z/t311-alexa-template.zip"
+                "S3Key": "serverless/t311-alexa-template/dev/1523643617007-2018-04-13T18:20:17.007Z/t311-alexa-template.zip"
               },
               "FunctionName": "t311-alexa-template-dev-handler",
               "Handler": "index.handler",
@@ -126,14 +126,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HandlerLambdaVersionL2J8b3gXOVeDpJNbIY7FNeE4iHWbwd0jHxnFE65130": {
+          "HandlerLambdaVersionBhAgHbKipNkIDy6LHKzG8yuGwtVSnRSOR5CIIfOwniU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HandlerLambdaFunction"
               },
-              "CodeSha256": "GJUyvb5j4rtm0/kAxxtt0pMLSvK9cCprMibAODR+BEk="
+              "CodeSha256": "Dezv1sSJ/KklfzCtl31mIFY15gbKfyp5Ppn9p3Qj2X8="
             }
           },
           "HandlerLambdaPermissionAlexaSkill": {
@@ -159,7 +159,7 @@
           "HandlerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HandlerLambdaVersionL2J8b3gXOVeDpJNbIY7FNeE4iHWbwd0jHxnFE65130"
+              "Ref": "HandlerLambdaVersionBhAgHbKipNkIDy6LHKzG8yuGwtVSnRSOR5CIIfOwniU"
             }
           }
         }
@@ -193,10 +193,10 @@
         "vpc": {}
       }
     },
-    "artifact": "S:\\Documents\\GitHub\\t311-alexa-template\\.serverless\\t311-alexa-template.zip"
+    "artifact": "C:\\Users\\derek\\Documents\\GitHub\\t311-alexa-template\\.serverless\\t311-alexa-template.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/t311-alexa-template/dev/1523592692269-2018-04-13T04:11:32.269Z",
+    "artifactDirectoryName": "serverless/t311-alexa-template/dev/1523643617007-2018-04-13T18:20:17.007Z",
     "artifact": "t311-alexa-template.zip"
   }
 }
