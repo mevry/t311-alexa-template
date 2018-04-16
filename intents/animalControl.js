@@ -1,3 +1,5 @@
+const mail = require('../mail');
+
 exports.animalControlIntents = {
     "AnimalNuisanceIntent": function(){
         const intent = this.event.request.intent;
@@ -31,18 +33,49 @@ exports.animalControlIntents = {
         }
         const contactConfirm = intent.slots.contactConfirm.resolutions.resolutionsPerAuthority[0].values[0].value.name;
         
+        
         switch(contactConfirm){
             case 'yes':
-                this.response.speak("Email sent.");
+                //ask for email
+                if(!intent.slots.emailAddress.value){
+                    const speechOutput = "What is your email address?";
+                    const repromptSpeech = speechOutput;
+                    this.emit(':elicitSlot','emailAddress',speechOutput, repromptSpeech);
+                    break;
+                }
+                const emailAddress = 'derekjmiller@gmail.com';
+                var department = '';
+                var phoneNumber = '';
+                var website = '';
+                if(residentCity.toLowerCase() == 'tacoma'){
+                    department = "Tacoma Animal Care and Control";
+                    phoneNumber = '(253) 627-7387'
+                    website = 'https://www.cityoftacoma.org/residents/animal_care_control'
+                }else if(residentCity.toLowerCase() == 'fircrest'){
+                    department = 'Fircrest Police Department';
+                    phoneNumber = '(253) 565-1198';
+                    website = 'https://www.cityoffircrest.net/government/fircrest-police/';
+                }
+                mail.send({
+                    'toAddress':emailAddress,
+                    'subject':'Tacoma First 311 - Animal Control Contact Info',
+                    'message':
+                        `<h3>Thank you for using Tacoma First 311</h3>
+                        <br>Here is the information you requested:<br><br>
+                        <strong>Topic:</strong> Reporting Animal Nuisance<br>
+                        <strong>Responsible Department:</strong> ${department}<br>
+                        <strong>Phone Number:</strong> ${phoneNumber}<br>
+                        <strong>Website:</strong> ${website}`
+                });
+                this.response.speak(`Email Sent`);
                 break;
-            case 'no':
-                this.response.speak("You said no");
-                break; 
             default:
-                this.response.speak(`Contact type is: ${contactType}`);
+                this.response.speak(`Thank you for using the Tacoma First Three One One Skill.`);
                 break;
         }
         this.emit(':responseReady');
+
+
         
     }
 };
